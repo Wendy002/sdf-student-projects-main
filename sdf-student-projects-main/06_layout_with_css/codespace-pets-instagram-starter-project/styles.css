@@ -57,13 +57,15 @@ img {
   .profile-stats ul {
     display: flex;
     list-style-type: none;
+    
 
   } 
   .profile-stats li{
     margin-left:2px;
     background-color: grey;
     padding: 5px;
-    color: white
+    color: white;
+    justify-content: center;
   }
 
   
@@ -115,22 +117,22 @@ img {
     color: #3897f0;
   }
 
-/*-----------The photo gallery part*/
+/*-----------The photo gallery part------------*/
 
   .gallery {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
 }
 
-.gallery-item {
-    width: 100%;
-}
 
 .gallery-image {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
 }
 
-.gallery-item-info {
+/*.gallery-item-info {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 5px;
@@ -148,9 +150,9 @@ img {
 .fa-heart,
 .fa-comment {
     margin-right: 5px;
-}
+}*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
     }
