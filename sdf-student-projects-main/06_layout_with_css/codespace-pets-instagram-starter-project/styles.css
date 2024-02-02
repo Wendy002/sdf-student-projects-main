@@ -134,19 +134,18 @@ img {
 }
 
 .gallery-item-info {
-    background-color: transparent;
-    color: white;
+    background-color: lightgrey;
+    color: black;
     padding: 5px;
     opacity: 0;
     transition: opacity 0.3s ease-in;
     position: relative;
-    top: -30%; /* Adjust vertically as needed */
-    left: 50%; /* Adjust horizontally as needed */
-    transform: translate(-50%, -50%);
-    padding: 5px 10px; /* Adjust padding as needed */
-    border-radius: 5px;
-    font-weight: bold;
+    top: -30%; /* Adjust vertically */
+    left: 50%; /* Adjust horizontally  */
+    transform: translate(-70%, -50%);
+
 }
+
 
 .gallery-item:hover .gallery-item-info {
     opacity: 1;
@@ -154,9 +153,13 @@ img {
 
 .gallery-item-likes,
 .gallery-item-comments {
-    margin-right: 10px;
+    margin-right: 50px;
     font-size: 14px;
-    
+
+}
+
+.gallery-item-comments{
+  right:  ;
 }
 
 .gallery-item-likes,
@@ -169,15 +172,15 @@ img {
     list-style-type: none;
 }
 
-.visually-hidden{
+.visually-hidden, .gallery-item-type{
    visibility: hidden;
 }
 
-/*.fa-heart,
+
 .fa-comment {
-    margin: 5px;
+    padding-left: 45px;
     
-}*/
+}
 
 /*media query to make website responsive*/
 @media screen and (max-width: 500px) {
