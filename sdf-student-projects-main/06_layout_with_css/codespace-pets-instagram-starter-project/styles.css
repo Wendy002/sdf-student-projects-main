@@ -123,7 +123,7 @@ img {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+    gap: 10px
 }
 
 
@@ -132,14 +132,7 @@ img {
     height: 150px;
 }
 
-/*.gallery-item-info {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .gallery-item-likes,
 .gallery-item-comments {
@@ -147,11 +140,27 @@ img {
     font-size: 14px;
 }
 
+.gallery-item-likes,
+.gallery-item-comments li{
+    list-style-type: none;
+}
+
+.gallery-item-comments,
+.gallery-item-likes li{
+    list-style-type: none;
+}
+
+.visually-hidden{
+   visibility: hidden;
+}
+
 .fa-heart,
 .fa-comment {
     margin-right: 5px;
-}*/
+    
+}
 
+/*media query to make website responsive*/
 @media screen and (max-width: 500px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
