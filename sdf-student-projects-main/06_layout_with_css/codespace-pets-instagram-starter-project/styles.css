@@ -130,14 +130,33 @@ img {
 .gallery-image {
     width: 150px;
     height: 150px;
+
 }
 
+.gallery-item-info {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    position: relative;
+    top: -30%; /* Adjust vertically as needed */
+    left: 50%; /* Adjust horizontally as needed */
+    transform: translate(-50%, -50%);
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px;
+    font-weight: bold;
+}
 
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
 
 .gallery-item-likes,
 .gallery-item-comments {
     margin-right: 10px;
     font-size: 14px;
+    
 }
 
 .gallery-item-likes,
@@ -154,11 +173,11 @@ img {
    visibility: hidden;
 }
 
-.fa-heart,
+/*.fa-heart,
 .fa-comment {
-    margin-right: 5px;
+    margin: 5px;
     
-}
+}*/
 
 /*media query to make website responsive*/
 @media screen and (max-width: 500px) {
