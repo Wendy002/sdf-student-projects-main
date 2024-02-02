@@ -5,7 +5,6 @@
 }
 
 
-
 body {
     font-family: "Open Sans", Arial, sans-serif;
     min-height: 100vh;
@@ -14,16 +13,14 @@ body {
     padding-bottom: 3rem;
 }
 
-img {
-    display: block;
-}
-/* Regular styles for desktop */
+
+/* Flexbox layout for the container and using wrap to warp elements */
 .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+  /* flex and assign direction to column to make profile vertical*/
   .profile {
     display: flex;
     flex-direction: column;
@@ -33,13 +30,13 @@ img {
   .profile-image img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 50%; /* round the image*/
     
   }
   
   .profile-user-settings {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* setting direction to row*/
     align-items: center;
   }
   
@@ -53,10 +50,10 @@ img {
     margin-top: 30px;
     margin-right: 100px;
   }
-  
+/* flex , remove list - , center tyhe items*/
   .profile-stats ul {
     display: flex;
-    list-style-type: none;
+    list-style-type: none; 
     font-size: 16px;
     justify-content: center;
 
@@ -68,7 +65,7 @@ img {
     
   }
 
-  
+  /* styling the numbers */
   .profile-stat-count {
     font-size: 16px;
     font-weight: 600;
@@ -84,28 +81,20 @@ img {
     font-size: 18px;
     font-weight: 600;
   }
-  
-  .btn {
-    display: inline-block;
-    background-color: #3897f0;
-    color: #fff;
-    border-radius: 3px;
-    padding: 8px 16px;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 0 10px;
-  }
+  /**/
+ 
   
   .profile-edit-btn {
     background-color: #fff;
     color: #3897f0;
     border: 1px solid #3897f0;
   }
-  
+/*on hover change above properties to properties below on edit button*/
   .profile-edit-btn:hover {
     background-color: rgba(0, 0, 0, 0.05);
   }
-  
+
+  /*on hover change above properties to properties below on settings*/
   .profile-settings-btn {
     background-color: transparent;
     border: none;
@@ -119,20 +108,21 @@ img {
 
 /*-----------The photo gallery part------------*/
 
+/* Set layout to grid for the images*/
   .gallery {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px
+    grid-template-columns: repeat(3, 1fr); /*number of columns*/
+    gap: 10px /*creates gap between images*/
 }
 
 
 .gallery-image {
     width: 150px;
-    height: 150px;
+    height: 150px;   /*size of the images*/
 
 }
-
+/*hides the likes and comments and shows on hover*/
 .gallery-item-info {
     background-color: rgba(223, 188, 188,.6);
     color: black;
@@ -147,11 +137,12 @@ img {
 
 }
 
-
+/*shows info*/
 .gallery-item:hover .gallery-item-info {
     opacity: 1;
 }
 
+/*adjuct the likes and comment inside their container*/
 .gallery-item-likes,
 .gallery-item-comments {
     margin-right: 50px;
@@ -159,29 +150,13 @@ img {
 
 }
 
-.gallery-item-comments{
-  right:  ;
-}
-
-.gallery-item-likes,
-.gallery-item-comments li{
-    list-style-type: none;
-}
-
-.gallery-item-comments,
-.gallery-item-likes li{
-    list-style-type: none;
-}
+/*removes the name "Likes" and "Comments*/
 
 .visually-hidden, .gallery-item-type{
    visibility: hidden;
 }
 
 
-.fa-comment {
-    padding-left: 45px;
-    
-}
 
 /*media query to make website responsive*/
 @media screen and (max-width: 500px) {
